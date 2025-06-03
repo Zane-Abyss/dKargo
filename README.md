@@ -129,7 +129,7 @@ The script will:
 
 ## Author
 
-Script by [@Meomundep](https://github.com/MeoMunDep) from [BlackCatSyndicate](https://t.me/KeoAirDropFreeNe)
+Script by [@Meomundep](https://t.me/MeoMunDep) from [BlackCatSyndicate](https://t.me/KeoAirDropFreeNe)
 
 ---
 
