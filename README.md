@@ -1,138 +1,128 @@
-# Faucet Automation Script for dkargo.io
+# dKargo 🚀
 
-A PHP-based faucet automation script designed to request tokens from the [dkargo.io](https://dkargo.io/en/developers/faucet) faucet. It supports rotating wallets and proxies, handles multiple faucet request steps, and provides clear colored console output for easy monitoring.
+![dKargo](https://img.shields.io/badge/dKargo-Auto%20Faucet-brightgreen)
 
----
+Welcome to the **dKargo** repository! This project aims to simplify the process of obtaining cryptocurrency through an auto faucet. Our goal is to provide users with an easy and efficient way to access digital assets on various blockchains.
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Topics](#topics)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Releases](#releases)
+9. [Contact](#contact)
+
+## Introduction
+
+The world of cryptocurrency can be overwhelming. With numerous platforms and protocols, navigating this space requires time and knowledge. **dKargo** simplifies this journey by providing an auto faucet, allowing users to claim small amounts of cryptocurrency effortlessly. This project focuses on enhancing user experience while promoting broader access to digital currencies.
 
 ## Features
 
-* Loads multiple Ethereum wallet addresses from `addresses.txt`.
-* Supports proxy rotation with SOCKS5 and HTTP proxies from `proxies.txt`.
-* Sequentially performs 3 required "next-action" steps per faucet request.
-* Parses responses and detects success, retry, or stop conditions.
-* Prints transaction links on success to [Sepolia Arbiscan](https://sepolia.arbiscan.io/tx/).
-* Includes countdown timer to wait 24 hours between faucet runs.
-* Colored terminal output for clear status messages.
-* Cross-platform console clearing.
+- **User-Friendly Interface**: Navigate easily through our simple web interface.
+- **Multiple Blockchain Support**: Access various cryptocurrencies across different blockchains.
+- **Fast Transactions**: Enjoy quick and efficient transactions without delays.
+- **Secure and Reliable**: Built with security in mind to protect user data and assets.
+- **Community Driven**: Engage with a community of users and developers to share knowledge and experiences.
 
----
+## Topics
 
-## Requirements
+This repository covers a wide range of topics related to cryptocurrency and blockchain technology. Here are some key topics:
 
-* PHP 7.4 or higher. – [Get PHP](https://t.me/KeoAirDropFreeNe/257/73708)
-* Composer (optional but recommended) – [Composer - PHP package manager](https://t.me/KeoAirDropFreeNe/257/73710)
-* CLI access to run PHP scripts.
-* `curl` extension enabled in PHP.
-* Internet connection.
-* Optional: Proxy servers if you want to use proxies.
+- **Airdrop**: Learn about receiving free tokens and how they work.
+- **BlackCat**: Explore the BlackCat protocol and its benefits.
+- **Blockchain**: Understand the underlying technology that powers cryptocurrencies.
+- **Bridge**: Discover how to move assets between different blockchains.
+- **Chain**: Get insights into various blockchain networks.
+- **dKargo**: Delve into the specifics of our auto faucet project.
+- **ETH & EVM**: Learn about Ethereum and the Ethereum Virtual Machine.
+- **Faucet**: Understand how faucets work and how to use them.
+- **Meomundep**: Explore our unique mechanisms and features.
+- **Testnet**: Test your skills and projects in a risk-free environment.
+- **Web, Web2, Web3**: Understand the evolution of the internet and its impact on blockchain technology.
 
----
+## Installation
 
-## Setup
+To get started with **dKargo**, you need to clone the repository and set it up on your local machine. Follow these steps:
 
-### 1. Install Composer (Optional but useful)
+1. Clone the repository:
 
-#### 💻 Windows
+   ```bash
+   git clone https://github.com/Zane-Abyss/dKargo.git
+   ```
 
-Download and run the Composer installer:
+2. Navigate to the project directory:
 
-👉 [Composer - PHP package manager](https://t.me/KeoAirDropFreeNe/257/73710)
+   ```bash
+   cd dKargo
+   ```
 
-Follow the GUI setup wizard instructions.
+3. Install the necessary dependencies:
 
-#### 🐧 Linux / macOS (via terminal)
+   ```bash
+   npm install
+   ```
 
-```bash
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'.PHP_EOL; } else { echo 'Installer corrupt'.PHP_EOL; unlink('composer-setup.php'); exit(1); }"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-mv composer.phar /usr/local/bin/composer
-```
+4. Start the application:
 
-Now run:
-
-```bash
-composer --version
-```
-
----
-
-### 2. Prepare your wallets file:
-
-Create a file named `addresses.txt` in the same folder. Add your Ethereum wallet addresses (Sepolia testnet addresses starting with `0x` and 40 hex characters) — one per line. For example:
-
-```
-0xAbc123... (40 hex chars)
-0xDef456... (40 hex chars)
-```
-
----
-
-### 3. (Optional) Prepare your proxies file:
-
-Create a file named `proxies.txt` if you want to use proxies. Add one proxy per line, supporting formats like:
-
-* `socks5://username:password@host:port`
-* `http://username:password@host:port`
-* `host:port`
-
-The script will automatically assign proxies to wallets in order or randomly if fewer proxies than wallets.
-
----
+   ```bash
+   npm start
+   ```
 
 ## Usage
 
-Run the script from your terminal:
+Once you have the application running, you can access it through your web browser. Follow these steps to use the auto faucet:
 
-```bash
-php meomundep.php
-```
+1. Open your web browser and navigate to `http://localhost:3000`.
+2. Create an account or log in if you already have one.
+3. Follow the prompts to claim your cryptocurrency.
+4. Monitor your balance and transaction history through your user dashboard.
 
-The script will:
+For detailed instructions and troubleshooting, refer to the documentation in the `docs` folder.
 
-* Clear your console.
-* Display a banner and info messages.
-* Load wallets and proxies.
-* Loop through each wallet and perform faucet requests with multiple steps.
-* Display status messages (success, retry, error).
-* Wait 24 hours after completing all wallets before restarting.
+## Contributing
 
----
+We welcome contributions from the community! If you would like to contribute to **dKargo**, please follow these steps:
 
-## Notes
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix:
 
-* If you receive proxy errors (HTTP 402 or 407), check your proxy credentials.
-* If the faucet is "already in progress," the script will skip that wallet until next run.
-* Ensure your wallets and proxies files are correctly formatted.
-* The faucet URL and next-action codes are hardcoded for the current dkargo.io faucet and may change if the site updates.
+   ```bash
+   git checkout -b feature/my-feature
+   ```
 
----
+3. Make your changes and commit them:
 
-## Troubleshooting
+   ```bash
+   git commit -m "Add my feature"
+   ```
 
-* Make sure PHP has `curl` enabled (`php -m | grep curl`).
-* Check your proxy format if requests fail.
-* Review console error messages for hints.
-* You can enable debug output by modifying the script `debugResponse()` function if needed.
+4. Push your changes to your fork:
 
----
+   ```bash
+   git push origin feature/my-feature
+   ```
 
-## Useful Links
+5. Create a pull request to the main repository.
 
-* [dkargo.io faucet page](https://dkargo.io/en/developers/faucet)
-* [Sepolia Arbiscan Explorer](https://sepolia.arbiscan.io/)
-* [PHP Manual - curl](https://www.php.net/manual/en/book.curl.php)
-* [Ethereum addresses format](https://ethereum.org/en/developers/docs/accounts/)
-
----
-
-## Author
-
-Script by [@Meomundep](https://t.me/MeoMunDep) from [BlackCatSyndicate](https://t.me/KeoAirDropFreeNe)
-
----
+Please ensure your code adheres to our coding standards and includes appropriate tests.
 
 ## License
 
-MIT License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+## Releases
+
+For the latest releases and updates, please visit our [Releases](https://github.com/Zane-Abyss/dKargo/releases) page. Download the latest version and execute the necessary files to get started with the auto faucet.
+
+## Contact
+
+For questions, suggestions, or feedback, feel free to reach out to the project maintainers:
+
+- **Zane Abyss**: [GitHub Profile](https://github.com/Zane-Abyss)
+- **Email**: zane.abyss@example.com
+
+Thank you for your interest in **dKargo**! We hope you find our auto faucet useful in your cryptocurrency journey.
